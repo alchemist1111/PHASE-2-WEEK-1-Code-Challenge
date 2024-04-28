@@ -1,8 +1,9 @@
-import Header from "./components/header";
-import Search from "./components/search";
-import Form from "./components/form";
-// import Sort from "./components/sort";
-import Table from "./components/table";
+import React from 'react';
+import Header from "./components/Header";
+import Search from "./components/Search";
+import Form from "./components/Form";
+import Sort from "./components/Sort";
+import Table from "./components/Table";
 import { useState } from "react";
 function App() {
  
@@ -51,27 +52,17 @@ function App() {
     }
     
   ];
-  
-  const [data, setData] = useState(transactions);
-  function submitData(formData) {
-    setData((data) =>[...data, formData]);
-  }
-
-  function handleDelete(id) {
-     const newData = data.filter((transactions, index) => {
-      return index !== id && transactions.index;
-     })
-     setData(newData);
-  }
 
   return (
     <div className="container">
       <Header />
       <Search />
+      
       <Form onSubmitData={submitData}/>
-      <Table data = {handleDelete} />
+      <Sort />
+      <Table data = {itemsToDisplay.sort(sortFunction(selectedSortOption))  handleDelete = {handleDelete}} />
     </div>
-  );
+  )
 }
 
 export default App;
