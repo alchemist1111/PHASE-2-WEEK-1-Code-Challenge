@@ -65,10 +65,24 @@
     },
     {
       "id": 10,
-      "date": "2019-12-16",
+      "date": "2024-04-13",
       "description": "Bought a TV set",
       "category": "Entertainment",
       "amount": 24000
+    },
+    {
+      "id": "4372",
+      "date": "2024-04-29",
+      "description": "Pay rent",
+      "category": "Movie ",
+      "amount": "100"
+    },
+    {
+      "id": "f217",
+      "date": "",
+      "description": "",
+      "category": "",
+      "amount": ""
     }
   ]
 }
