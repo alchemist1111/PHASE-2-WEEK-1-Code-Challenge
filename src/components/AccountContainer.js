@@ -7,7 +7,7 @@ function AccountContainer() {
   const [transaction, setTransaction] = useState([])
   const [data, setData] = useState("")
   useEffect(() => {
-    fetch("http://localhost:3000/transactions?q=" + data)
+    fetch("https://json-server-1-9vxu.onrender.com/transactions" + data)
       .then((resp) => resp.json())
       .then(transaction => setTransaction(transaction))
   }, [data])
