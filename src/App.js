@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Table from "./components/Table";
 import Search from "./components/Search";
+import Sort from "./components/Sort";
 
 function App() {
   const [tableData, setTableData] = useState([
@@ -81,7 +82,9 @@ function App() {
       <div>
           <Header />
           <Search data={tableData} setData={handleSearch} /> {/* this renders the Searchbar component */}
+          <Sort data={filteredData} /> {/* this renders the Sort component with filtered data */}
           <Table data={filteredData} /> {/* this renders the MyTable component with filtered data */}
+          
        </div>
     </div>
     

@@ -4,7 +4,7 @@ import Row from './Row';
 
 function Table({ data }) {
   return (
-    <table className="table table-light table-striped table-hover m-auto">
+    <table className="table table-light table-striped table-hover">
       <thead>
         <tr>
           <th>Date</th>
