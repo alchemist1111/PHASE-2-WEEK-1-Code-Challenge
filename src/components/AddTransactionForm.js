@@ -7,6 +7,7 @@ function AddTransactionForm() {
   const [category, setCategory] = useState("")
   const [amount, setAmount] = useState("")
   function handleSubmit(e) {
+    e.preventDefault();
     fetch("https://json-server-1-9vxu.onrender.com/transactions", {
       method: "POST",
       headers: {
