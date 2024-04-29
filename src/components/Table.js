@@ -4,13 +4,14 @@ import Row from './Row';
 
 function Table({ data }) {
   return (
-    <table className="table table-light table-striped table-hover">
+    <table className="table table-light table-striped table-hover m-auto">
       <thead>
         <tr>
           <th>Date</th>
           <th>Description</th>
           <th>Category</th>
           <th>Amount</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>

@@ -9,6 +9,7 @@ function Row({data}) {
           <td>{item.description}</td> {/* this displays the description */}
           <td>{item.category}</td> {/* this displays the category */}
           <td>{item.amount}</td> {/* this displays the amount */}
+          <button className="btn btn-primaty ">Delete</button>
         </tr>
       ))}
     </>
