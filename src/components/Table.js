@@ -1,23 +1,23 @@
 
 import React from 'react';
-import Rows from './Row';
+import Row from './Row';
 
-function MyTable({ data }) {
+function Table({ data }) {
   return (
-    <table className="table table-light table-striped table-hover" >
+    <table className="table table-light table-striped table-hover">
       <thead>
-        <tr className="">
+        <tr>
           <th>Date</th>
           <th>Description</th>
           <th>Category</th>
           <th>Amount</th>
         </tr>
       </thead>
-      <tbody className="table1">
-        <Rows data={data} />
+      <tbody>
+        <Row data={data} />
       </tbody>
     </table>
   );
 }
 
-export default MyTable;
+export default Table;

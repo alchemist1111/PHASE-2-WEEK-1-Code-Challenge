@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Rows({ data }) {
+function Row({data}) {
   return (
     <>
       {data.map((item, index) => ( // this maps through the data to render rows
-        <tr key={index+1}>
+        <tr key={index}>
           <td>{item.date}</td> { /*this displays the Date */ }
           <td>{item.description}</td> {/* this displays the description */}
           <td>{item.category}</td> {/* this displays the category */}
@@ -15,4 +15,4 @@ function Rows({ data }) {
   );
 }
 
-export default Rows;
+export default Row;

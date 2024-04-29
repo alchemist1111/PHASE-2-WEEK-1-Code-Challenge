@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import MyTable from "./components/Table";
-import Searchbar from "./components/Search";
+import Table from "./components/Table";
+import Search from "./components/Search";
 
 function App() {
   const [tableData, setTableData] = useState([
@@ -73,14 +73,15 @@ function App() {
 
   const handleSearch = (filteredData) => { //this function handles the search and update filtered data
     setFilteredData(filteredData); // this state updates filtered data
+    setTableData(tableData);
   };
 
   return (
     <div className="container">
       <div>
           <Header />
-          <Searchbar data={tableData} setData={handleSearch} /> {/* this renders the Searchbar component */}
-          <MyTable data={filteredData} /> {/* this renders the MyTable component with filtered data */}
+          <Search data={tableData} setData={handleSearch} /> {/* this renders the Searchbar component */}
+          <Table data={filteredData} /> {/* this renders the MyTable component with filtered data */}
        </div>
     </div>
     

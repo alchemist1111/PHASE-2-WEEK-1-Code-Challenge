@@ -5,6 +5,7 @@ function Search({ data, setData }) {
 
   const handleSearch = (e) => { // this function  handles search input change
     const query = e.target.value.toLowerCase(); //this gets the search query from the input and converts it to lowercase
+    console.log(query);
     setSearchQuery(query); //this updates the state of the search query
 
     const filteredData = data.filter((item) => //this filters the data in the table based on search query
@@ -31,13 +32,13 @@ function Search({ data, setData }) {
         <div className="col-md-3 d-flex align-items-center">
          <label className="me-2">Date</label>
           <input
-          className="form-control"
+          className=" date 1 form-control"
           type="date"
           />
         </div>
         <div className="col-md-3">
           <input
-          className="form-control"
+          className=" deascription1 form-control"
           type="text"
           name="description"
           placeholder="Description"
@@ -45,20 +46,20 @@ function Search({ data, setData }) {
         </div>
         <div className="col-md-3">
             <input
-              className="form-control"
+              className=" category1 form-control"
               type="text"
               placeholder="Category"
             />
         </div>
         <div className="col-md-3">
         <input
-          className="form-control"
+          className=" amount1 form-control"
           type="text"
           placeholder="Amount"
         />
         </div>
         <button
-        className="tn btn-secondary col-md-2 mx-auto" type="submit"
+        className="btn btn-secondary col-md-2 mx-auto" type="submit"
           onClick={(e) => {
             e.preventDefault();
             const newTransaction = {
